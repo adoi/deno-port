@@ -1,5 +1,7 @@
 # deno-port 
 
+[![Build Status](https://travis-ci.com/adoi/deno-port.svg?token=MpMUqcHdDLu9bixjbXWa&branch=master)](https://travis-ci.com/adoi/deno-port)
+
 ### Get an available TCP port for your Deno server
 
 ## Basic Usage
