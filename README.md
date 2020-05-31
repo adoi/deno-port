@@ -14,7 +14,7 @@
   }
 
 ```
-The module works with different frameworks of Deno. You can check an example with OAK in the `examples/` folder.
+The module works with different frameworks of Deno. You can check an example with OAK in the `examples/` folder. It is inspired by get-port, find-free-port or other related packages for nodejs.
 
 -----
 ## API
@@ -80,3 +80,6 @@ portRange(3001, 8080, { log: true });
 
 portRange(3000, 3011); // by default log is false
 ```
+
+## Other
+There are no race conditions when the ports are assigned.
