@@ -1,0 +1,12 @@
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.cache/deno
+
+before_install:
+  - curl -fsSL https://deno.land/x/install/install.sh | sh -s $DENO_VERSION
+  - export PATH="$HOME/.deno/bin:$PATH"
+
+script:
+  - deno test --allow-net
