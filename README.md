@@ -8,7 +8,7 @@
 
 ```ts
   import { serve } from "https://deno.land/std/http/server.ts";
-  import { getPort, portRange, portSelection } from "https://deno.land/x/deno-port/mod.ts";
+  import { getPort, portRange, portSelection } from "https://deno.land/x/port/mod.ts";
 
   const s = serve({ port: portSelection([3011, 8080], { log: true }) });
   for await (const req of s) {
@@ -42,7 +42,7 @@ getPort(3000); // by default log is false
 <br />
 
 
-### `portSelection([1, 2, ..., n])`
+### `portSelection([1024, 1024, ..., n])`
 ```ts
 portSelection(ports: Array<number>, options?: { log?: boolean})
 ```
