@@ -10,7 +10,16 @@ function rand(min: number, max: number): number {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Get a random port from a specified range
+/**
+  * Provides a port to listen to for requests based on a range we specify.
+  * 
+  * @param {number} from
+  * @param {number} to
+  * @param {{ log: boolean}} options
+  * 
+  * @returns {number} The port to listen to
+  * @public
+ */
 export function portRange(
   from: number,
   to: number,

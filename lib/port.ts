@@ -3,7 +3,16 @@ import { serve } from "https://deno.land/std/http/server.ts";
 import { logger } from "./utils/logger.ts";
 import { portValidation } from "./utils/validationChecks.ts";
 
-// Listen to a port, if not available fallback to a random free port
+/**
+  * Provides a port to listen to for requests.
+  * If no port is specified in the arguments, a random port is assigned from the OS.
+  * 
+  * @param {?number} port
+  * @param {{ log: boolean}} options
+  * 
+  * @returns {number} The port to listen to
+  * @public
+ */
 export function getPort(
   port = 0,
   options = { log: false }, // by default we don't log the port running

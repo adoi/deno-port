@@ -16,7 +16,16 @@ function portHelper(
   }
 }
 
-// Get ports from selection, if all selected ports are already in use, assign a free port from the OS
+/**
+  * Provides a port to listen to for requests based on a selection of ports we specify in the array.
+  * If all selected ports are already in use, a random port is assigned from the OS.
+  * 
+  * @param {Array<number>} ports
+  * @param {{ log: boolean}} options
+  * 
+  * @returns {number} The port to listen to
+  * @public
+ */
 export function portSelection(
   ports: Array<number>,
   options: { log?: boolean } = {}, // by default we don't log the ports running
