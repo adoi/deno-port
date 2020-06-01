@@ -1,6 +1,6 @@
 import { Application } from "https://deno.land/x/oak/mod.ts";
 
-import { getPort, portRange } from "../mod.ts";
+import { getPort, portRange } from "https://deno.land/x/port/mod.ts";
 
 const app = new Application();
 

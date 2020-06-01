@@ -1,6 +1,10 @@
 import { serve } from "https://deno.land/std/http/server.ts";
 
-import { getPort, portRange, portSelection } from "../mod.ts";
+import {
+  getPort,
+  portRange,
+  portSelection,
+} from "https://deno.land/x/port/mod.ts";
 
 const serverOne = serve({ port: getPort(3001) });
 for await (const req of serverOne) {
