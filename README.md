@@ -23,7 +23,7 @@ The module works with different frameworks of Deno. You can check an example wit
 
 ### `getPort()`
 ```ts
-getPort(port?: number, options?: { log?: boolean })
+getPort(port?: number, options?: { log?: boolean }): number
 ```
 If port was specified it returns that `port`, if it was not, it returns a random port assigned from the Operating System.
 
@@ -42,9 +42,9 @@ getPort(3000); // by default log is false
 <br />
 
 
-### `portSelection([1024, 1024, ..., n])`
+### `portSelection([1024, 1025, ..., n])`
 ```ts
-portSelection(ports: Array<number>, options?: { log?: boolean})
+portSelection(ports: Array<number>, options?: { log?: boolean}): number
 ```
 Returns a port from the specified selection of ports in the `ports` array. <br />
 
@@ -65,7 +65,7 @@ portSelection([3000, 3011]); // by default log is false
 
 ### `portRange(min_port, max_port)`
 ```ts
-portRange(min_port: number, max_port: number, options?: { log?: boolean})
+portRange(min_port: number, max_port: number, options?: { log?: boolean}): number
 ```
 Returns a port in between `min_port` and `max_port`. <br />
 
